@@ -19,15 +19,22 @@
   width: 100vw;
   background-color: #51A2DB;
   color: beige;
+  
 }
 .section{
   display: flex;
   justify-content: center;
+  flex-direction: column;
   width:50vw;
   padding:3vw;
-  font-size: 4rem;
+  font-size: 2rem;
   justify-content: center;
   align-items: center;
+}
+.section li{
+  display: flex;
+  align-items: flex-start;
+  padding:10px 0 10px 0;
 }
 
 .footer{
@@ -35,11 +42,20 @@
   height: 30vh;
   width: 100vw;
   background-color: rgb(7, 13, 14);
+  color: antiquewhite;
+  padding: 3rem;
+  flex-direction: column;
+  justify-content: center;
+}
+.footerdiv{
+  display: flex;
+  width: 50vw;
+  flex-direction: column;
 }
 
 header{
  
-          background-color: #8C939D;
+          background-color: #ffffff;
           width: 100vw;          
           background-image: url("../assets/img/headergithub.jpg");
           background-repeat: no-repeat;
@@ -58,3 +74,9 @@ header{
 }
 
 
+@media screen and (min-width: 600px) {
+  .section {
+    
+    
+  }
+}
