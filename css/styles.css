@@ -3,15 +3,29 @@
   margin:-8px;
 }
 #headertxt{
-  display: flex;
-  flex-direction: column;
-  padding:2%;
-  justify-content: center;
-  align-items: center;
-  font-size: 6rem;
-  color: aliceblue;
+  position: absolute;
+  top:3vh;
+  left: 0;
+  z-index: 2;
+  width: 40vw;
+  font-size: 8rem;
+  color: dimgrey;
+  padding:50px;
+  -webkit-animation: slide-rotate-ver-l-bck 4.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+	        animation: slide-rotate-ver-l-bck 4.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 }
-
+#byjohn{
+  position: absolute;
+  top:60vh;
+  left: 20vw;
+  z-index: 2;
+  width: 40vw;
+  font-size: 4rem;
+  color: dimgrey;
+  padding:50px;
+  -webkit-animation: slide-in-bck-center 6.5s cubic-bezier(0.860, 0.000, 0.070, 1.000) both;
+	        animation: slide-in-bck-center 6.5s cubic-bezier(0.860, 0.000, 0.070, 1.000) both;
+}
 
 .details{
   display: flex;
@@ -68,11 +82,54 @@ header{
   top:0;
   left: 0;
   z-index: 1;
-  width: 100vw;
+  width: 80vw;
   
   
 }
 
+
+
+@keyframes slide-rotate-ver-l-bck {
+  0% {
+    -webkit-transform: translateX(0) translateZ(0) rotateY(100);
+            transform: translateX(0) translateZ(0) rotateY(100);
+    -webkit-transform-origin: center left;
+            transform-origin: center left;
+  }
+  100% {
+    -webkit-transform: translateX(100px) translateZ(-230px) rotateY(420deg);
+            transform: translateX(100px) translateZ(-230px) rotateY(360deg);
+    -webkit-transform-origin: center left;
+            transform-origin: center left;
+            color: #51A2DB;
+  }
+}
+
+@-webkit-keyframes slide-in-bck-center {
+  0% {
+    -webkit-transform: translateZ(600px);
+            transform: translateZ(600px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bck-center {
+  0% {
+    -webkit-transform: translateZ(600px);
+            transform: translateZ(600px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+    color: white;
+  }
+}
 
 @media screen and (min-width: 600px) {
   .section {
