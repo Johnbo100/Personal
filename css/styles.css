@@ -1,7 +1,12 @@
-.container{
-  width:100vw;
-  margin:-8px;
+html{
+  
 }
+body{
+  position: absolute;
+  top:-10px;
+  left: -10px;
+}
+
 #headertxt{
   position: absolute;
   top:3vh;
@@ -17,13 +22,11 @@
 }
 #byjohn{
   position: absolute;
-  top:3vh;
-  left: 60vw;
+  top:5vh;
+  left: 65vw;
   z-index: 2;
-  width: 80vw;
   font-size: 3vw;
   color: dimgrey;
-  padding:50px;
   -webkit-animation: slide-in-bck-center 8.5s cubic-bezier(0.860, 0.000, 0.070, 1.000) both;
 	        animation: slide-in-bck-center 8.5s cubic-bezier(0.860, 0.000, 0.070, 1.000) both;
 }
@@ -34,7 +37,8 @@
   width: 100vw;
 }
 .workex img{
-  width:80%;
+  width:65%;
+  padding: 25px;
 }
 .details{
   display: flex;
@@ -47,7 +51,6 @@
 .section{
   display: flex;
   flex-direction: column;
-  padding:3vw;
   font-size: calc(20px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   justify-content: center;
   align-items: center;
@@ -67,14 +70,15 @@
   width: 100vw;
   background-color: rgb(7, 13, 14);
   color: antiquewhite;
-  padding: 3rem;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
 }
 .footerdiv{
   display: flex;
-  width: 50vw;
+  margin:45px;
   flex-direction: column;
+ 
 }
 
 header{
@@ -96,6 +100,28 @@ header{
   
   
 }
+#imgcontainer{
+  animation: fadeIn ease 2s;
+-webkit-animation: fadeIn ease 2s;
+}
+#leftarrow :hover{
+  opacity: 0.5;
+}
+#rightarrow :hover{
+  opacity: 0.5;
+}
+
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+
+@-webkit-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
 
 
 
@@ -157,5 +183,12 @@ header{
   }
   .details{
     flex-direction: column;
+  }
+  .footer{
+    flex-direction: column;
+  }
+  .footerdiv{
+    align-items: center;
+    flex-wrap: wrap;
   }
 }
