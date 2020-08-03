@@ -28,6 +28,14 @@
 	        animation: slide-in-bck-center 8.5s cubic-bezier(0.860, 0.000, 0.070, 1.000) both;
 }
 
+.workex{
+  color: dodgerblue;
+  display: flex;
+  width: 100vw;
+}
+.workex img{
+  width:80%;
+}
 .details{
   display: flex;
   height: 100vh;
@@ -38,13 +46,14 @@
 }
 .section{
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  width:50vw;
   padding:3vw;
-  font-size: 18px;
+  font-size: calc(20px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   justify-content: center;
   align-items: center;
+}
+.section h1{
+  font-size: calc(32px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 .section li{
   display: flex;
@@ -137,7 +146,16 @@ header{
 
 @media screen and (min-width: 600px) {
   .section {
+    width: 100vw;
     
-    
+  }
+}
+
+@media (orientation: portrait) {
+  .section {
+    width: 100vw;
+  }
+  .details{
+    flex-direction: column;
   }
 }
